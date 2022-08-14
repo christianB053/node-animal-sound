@@ -5,6 +5,10 @@ const port = 3000;
 
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
 app.get("/sound/:name", (req, res) => {
   const { name } = req.params;
   console.log(name);
